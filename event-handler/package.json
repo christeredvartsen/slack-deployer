@@ -1,0 +1,21 @@
+{
+  "name": "event-handler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/interactive-messages": "^1.5.0",
+    "axios": "^0.19.2",
+    "dayjs": "^1.8.22"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

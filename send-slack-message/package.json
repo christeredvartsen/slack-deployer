@@ -1,0 +1,27 @@
+{
+  "name": "send-slack-message",
+  "version": "0.0.0",
+  "description": "GitHub Action for sending a custom message to a Slack channel",
+  "main": "index.js",
+  "scripts": {
+    "package": "ncc build index.js -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christeredvartsen/slack-deployer.git"
+  },
+  "author": "Christer Edvartsen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/christeredvartsen/slack-deployer/issues"
+  },
+  "homepage": "https://github.com/christeredvartsen/slack-deployer#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "axios": "^0.19.2",
+    "dayjs": "^1.8.22"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.20.5"
+  }
+}

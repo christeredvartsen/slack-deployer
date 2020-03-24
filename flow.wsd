@@ -1,0 +1,20 @@
+@startuml
+title Slack deployer flow
+actor Developer as User
+entity "GitHub repo / workflow" as GitHub
+entity "Slack channel" as SlackChannel
+entity "Slack app" as SlackApp
+entity Cloud
+
+User -> GitHub : Commit code
+GitHub -> GitHub : Start build workflow
+alt Successful build
+GitHub -> SlackChannel : Post message to Slack
+SlackChannel -> User : Ask permission to deploy
+User ->SlackChannel : Approve deployment
+SlackChannel -> SlackApp : Initiate deployment
+SlackApp -> GitHub : Start deployment workflow
+GitHub -> GitHub : Run deployment workflow
+GitHub -> Cloud : Deploy application
+end
+@enduml

@@ -1,0 +1,16 @@
+name: Send deployment request message to a Slack channel
+author: Christer Edvartsen
+description: Send an interactive message to a Slack channel asking whether or not a user wants to deploy an app or cancel deployment
+inputs:
+  slackChannel:
+    description: The channel to send the message to
+    required: true
+  slackToken:
+    description: Token to use with the Slack App
+    required: true
+runs:
+  using: node12
+  main: dist/index.js
+branding:
+  icon: upload-cloud
+  color: red
